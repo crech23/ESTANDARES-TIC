@@ -1,0 +1,136 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #000000; /* fondo negro */
+    color: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 255, 0, 0.3);
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #39ff14; /* verde neón */
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #39ff14;
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #39ff14;
+    color: #000;
+    border-radius: 5px;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #111;
+        padding: 10px;
+        box-shadow: 0 5px 10px rgba(0,255,0,0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Secciones */
+.seccion {
+    padding: 100px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid #222;
+    background: #000000;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.seccion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.seccion h1,
+.seccion h2 {
+    color: #39ff14; /* verde neón */
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.seccion i {
+    margin-right: 10px;
+    color: #39ff14;
+    font-size: 1.2em;
+}
+
+.seccion p {
+    color: #ffffff; /* texto blanco */
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Inicio especial */
+.inicio {
+    background: linear-gradient(180deg, #111, #000);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: #111;
+    color: #39ff14;
+    font-size: 0.9em;
+}
