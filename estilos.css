@@ -31,14 +31,14 @@ body {
     font-size: 1.3em;
     color: #39ff14; /* verde neón */
 }
-
+/* el menu */
 .menu-icon {
     font-size: 24px;
     cursor: pointer;
     color: #39ff14;
     display: none;
 }
-
+/*menu flexible*/
 .nav-links {
     display: flex;
     list-style: none;
@@ -59,7 +59,7 @@ body {
     border-radius: 5px;
 }
 
-/* Responsive Menu */
+/* menu responsivo */   /*parte del menu cuando nosotros entramos en telefono*/
 @media (max-width: 768px) {
     .menu-icon {
         display: block;
@@ -81,7 +81,7 @@ body {
     }
 }
 
-/* Secciones */
+/* Secciones */ /*cuando abrimos el menu amburguesa en celular las dimenciones y en forma de columna*/
 .seccion {
     padding: 100px 20px;
     min-height: 100vh;
